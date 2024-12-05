@@ -1,0 +1,62 @@
+/* General styles */
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.board {
+  display: inline-block;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: -1px; /* Remove gaps between cells */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .App {
+    margin-top: 20px; /* Reduced margin for mobile */
+  }
+
+  .board {
+    width: 90vw; /* Board takes 90% of viewport width */
+  }
+
+  .row {
+    flex-wrap: wrap; /* Ensure rows wrap correctly */
+  }
+
+  .cell {
+    width: 10%; /* Each cell is 10% of the board width */
+    height: 10%; /* Each cell is 10% of the board height */
+    font-size: 3vw; /* Font size relative to viewport width */
+    border: 1px solid #000;
+    box-sizing: border-box; /* Include padding and border in element's width */
+  }
+
+  button {
+    padding: 5px 10px; /* Adjust button padding for smaller screens */
+    font-size: 14px; /* Smaller font size for buttons */
+  }
+}
